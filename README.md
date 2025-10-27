@@ -1,5 +1,3 @@
-
-
 # 🪶 **RytUp — India’s Unified Social Media Platform**
 
 **RytUp** is a **full-scale social media infrastructure** engineered to unify articles, communities, Q&A, and real-time chat into a single, continuously synchronized ecosystem.
