@@ -90,6 +90,10 @@ All structural components, deployment pipelines, and base configurations are est
 Each subsequent module will expand this repository into a fully operational production web application under the **RytUp umbrella**.
 
 ---
+<img width="444" height="912" alt="image" src="https://github.com/user-attachments/assets/f1c75179-01f8-42f0-a6c8-ab42006029ab" />
+<img width="449" height="913" alt="image" src="https://github.com/user-attachments/assets/ff54d77f-a72a-4c2c-8500-15175e4ef72f" />
+<img width="451" height="879" alt="image" src="https://github.com/user-attachments/assets/4c3aade9-db52-4514-8e8c-beede9fa88b5" />
+<img width="476" height="892" alt="image" src="https://github.com/user-attachments/assets/4546e434-ea94-4756-a58c-60bfa11deedb" />
 
 ## 🧩 **Definitive Statement**
 
