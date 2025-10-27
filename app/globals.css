@@ -1,3 +1,13 @@
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -127,8 +137,12 @@
 }
 
 /* Clean Spacing */
-.space-clean { @apply space-y-6; }
-.gap-clean { @apply gap-4; }
+.space-clean {
+  @apply space-y-6;
+}
+.gap-clean {
+  @apply gap-4;
+}
 
 /* Professional Focus States */
 .focus-clean {
@@ -163,8 +177,14 @@
 
 /* Clean animations */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in-up {
