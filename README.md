@@ -2,6 +2,7 @@
 
 **RytUp** is a **full-scale social media infrastructure** engineered to unify articles, communities, Q&A, and real-time chat into a single, continuously synchronized ecosystem.
 It enforces deep contextual integration, anonymity integrity, and real-time state synchronization across all forms of user expression.
+
 ---
 
 ## ⚙️ **Repository Overview**
