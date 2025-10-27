@@ -94,5 +94,4 @@ Each subsequent module will expand this repository into a fully operational prod
 ## 🧩 **Definitive Statement**
 
 > **RytUp enforces a modular, deterministic, and privacy-centric social framework that unifies creation, communication, and collaboration into a single, synchronized system.**
-
 ---
