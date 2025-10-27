@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+    --primary: 48 100% 88%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 48 100% 88%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 48 100% 88%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 48 100% 88%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 6%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 48 100% 88%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 12%;
+    --input: 0 0% 8%;
+    --ring: 48 100% 88%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Professional Typography */
+.text-display {
+  @apply text-3xl font-bold tracking-tight leading-tight;
+}
+
+.text-headline {
+  @apply text-2xl font-semibold tracking-tight leading-tight;
+}
+
+.text-title {
+  @apply text-xl font-semibold leading-tight;
+}
+
+.text-body {
+  @apply text-base leading-relaxed;
+}
+
+.text-body-sm {
+  @apply text-sm leading-relaxed;
+}
+
+.text-caption {
+  @apply text-sm text-muted-foreground;
+}
+
+/* Clean Card System */
+.card-clean {
+  @apply bg-card border border-border rounded-lg;
+}
+
+.card-minimal {
+  @apply bg-card;
+}
+
+/* Professional Button System */
+.btn-primary-clean {
+  @apply bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-6 py-3 rounded-lg transition-colors duration-200;
+}
+
+.btn-secondary-clean {
+  @apply bg-secondary hover:bg-secondary/80 text-secondary-foreground font-medium px-6 py-3 rounded-lg transition-colors duration-200;
+}
+
+.btn-ghost-clean {
+  @apply hover:bg-accent/10 text-foreground font-medium px-4 py-2 rounded-lg transition-colors duration-200;
+}
+
+/* Styled Logo Text */
+.logo-text {
+  @apply text-3xl font-bold tracking-tight;
+  background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #1f2937 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .logo-text {
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Clean Spacing */
+.space-clean { @apply space-y-6; }
+.gap-clean { @apply gap-4; }
+
+/* Professional Focus States */
+.focus-clean {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary;
+}
+
+/* Pitch Black Scrollbar for Dark Mode */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Clean animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* SELECTIVE PITCH BLACK OVERRIDES - Only target main backgrounds */
+.dark body {
+  background-color: #000000 !important;
+}
+
+.dark main {
+  background-color: #000000 !important;
+}
+
+/* Ensure backdrop blur is pitch black */
+.dark .bg-background\/95 {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+}
+
+.dark .backdrop-blur-sm,
+.dark .backdrop-blur-md {
+  backdrop-filter: blur(8px);
+}
+
+/* Better contrast for interactive elements */
+.dark .bg-muted {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.dark .bg-secondary {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Ensure cards are visible with subtle background */
+.dark .bg-card {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Primary elements (yellow) should remain bright */
+.dark .bg-primary {
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+}
+
+/* Input styling for better visibility */
+.dark input,
+.dark textarea {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: white !important;
+}
+
+.dark input:focus,
+.dark textarea:focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: hsl(var(--primary)) !important;
+}
+
+/* Button hover states */
+.dark button:hover:not(.bg-primary) {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Navigation items visibility */
+.dark .text-muted-foreground {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Colored hover states for actions */
+.dark .hover\:bg-red-50:hover {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+.dark .hover\:bg-blue-50:hover {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+.dark .hover\:bg-green-50:hover {
+  background-color: rgba(34, 197, 94, 0.1) !important;
+}
+
+.dark .hover\:bg-primary\/10:hover {
+  background-color: rgba(254, 240, 138, 0.1) !important;
+}
+
+/* Notification/alert backgrounds */
+.dark .bg-yellow-50 {
+  background-color: rgba(254, 240, 138, 0.1) !important;
+}
+
+.dark .bg-blue-50 {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+.dark .bg-red-50 {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+.dark .bg-green-50 {
+  background-color: rgba(34, 197, 94, 0.1) !important;
+}
